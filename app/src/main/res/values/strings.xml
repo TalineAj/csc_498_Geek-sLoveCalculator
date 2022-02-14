@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Geek\'s Love Calculator</string>
+    <string-array name="languages">
+        <item>Java</item>
+        <item>JavaScript</item>
+        <item>Python</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>C#</item>
+        <item>PHP</item>
+        <item>R</item>
+
+
+    </string-array>
+
+
+</resources>
