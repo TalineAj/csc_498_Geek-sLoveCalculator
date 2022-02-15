@@ -1,18 +1,13 @@
 package com.lau.geekslovecalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
 
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.icu.number.Scale;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.RotateAnimation;
-import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -56,9 +51,16 @@ public class MainActivity extends AppCompatActivity {
         String language = mySpinner.getSelectedItem().toString();//gets the selected language
         String name_value = name.getText().toString();// gets the name of the user
         ImageView languageimg = (ImageView) findViewById(R.id.languagelogo);
+        EditText javap = (EditText) findViewById(R.id.javap);
+        EditText jsp = (EditText) findViewById(R.id.jsp);
+        EditText pythonp = (EditText) findViewById(R.id.pythonp);
+        EditText cp = (EditText) findViewById(R.id.cp);
+        EditText cppp = (EditText) findViewById(R.id.cppp);
+        EditText csharpp = (EditText) findViewById(R.id.csharpp);
+        EditText phpp= (EditText) findViewById(R.id.phpp);
+        EditText rp = (EditText) findViewById(R.id.rp);
         //Was initially planning on using the visibility attribute as learned in class however this means creating 8 Imageviews and setting
         //their visibility according to the case which does not look efficient , that is why I decided to set the image from java
-        Resources res = getResources();
         Random num =  new Random();
         int match = num.nextInt(100);
 
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation = new RotateAnimation(0,360);
                     animation.setDuration(2000);
                     languageimg.startAnimation(animation);
+                    javap.setText(match+"%");
                     break;
 
                 case "JavaScript":
@@ -80,16 +83,16 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation1 = new RotateAnimation(0,-360);
                     animation1.setDuration(2000);
                     languageimg.startAnimation(animation1);
-                    languageimg.animate().rotation(360);
+                    jsp.setText(match+"%");
+
                     break;
 
                 case "Python":
                     languageimg.setImageResource(R.drawable.python);
                     RotateAnimation animation2 = new RotateAnimation(0,-360);
                     animation2.setDuration(2000);
-//                    ScaleAnimation animation2 = new ScaleAnimation(100,200,0,0);
-//                    animation2.setDuration(2000);
                     languageimg.startAnimation(animation2);
+                    pythonp.setText(match+"%");
                     break;
                 ///change animations
 
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation3= new RotateAnimation(0,360);
                     animation3.setDuration(2000);
                     languageimg.startAnimation(animation3);
+                    cp.setText(match+"%");
                     break;
 
                 case "C++":
@@ -106,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation4= new RotateAnimation(0,360);
                     animation4.setDuration(2000);
                     languageimg.startAnimation(animation4);
+                    cppp.setText(match+"%");
                     break;
 
 
@@ -114,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation5= new RotateAnimation(0,360);
                     animation5.setDuration(2000);
                     languageimg.startAnimation(animation5);
+                    csharpp.setText(match+"%");
                     break;
 
                 case "PHP":
@@ -121,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation6= new RotateAnimation(0,360);
                     animation6.setDuration(2000);
                     languageimg.startAnimation(animation6);
+                    phpp.setText(match+"%");
                     break;
 
                 case "R":
@@ -129,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     RotateAnimation animation7= new RotateAnimation(0,360);
                     animation7.setDuration(2000);
                     languageimg.startAnimation(animation7);
+                    rp.setText(match+"%");
                     break;
 
             }
