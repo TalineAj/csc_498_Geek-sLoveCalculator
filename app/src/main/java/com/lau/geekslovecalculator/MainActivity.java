@@ -5,11 +5,14 @@ import androidx.core.content.res.ResourcesCompat;
 
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.icu.number.Scale;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -54,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
         String name_value = name.getText().toString();// gets the name of the user
         ImageView languageimg = (ImageView) findViewById(R.id.languagelogo);
         //Was initially planning on using the visibility attribute as learned in class however this means creating 8 Imageviews and setting
-        //their visibility according to the case which does not look efficient , that is why I researched the possibility of setting image in java
-        //and there was a way to do so which I used here
+        //their visibility according to the case which does not look efficient , that is why I decided to set the image from java
         Resources res = getResources();
         Random num =  new Random();
         int match = num.nextInt(100);
@@ -65,58 +67,70 @@ public class MainActivity extends AppCompatActivity {
             switch (language)
             {
                 case "Java":
-                {
 
-                    Drawable java_logo = ResourcesCompat.getDrawable(res, R.drawable.java, null);
-                    languageimg.setImageDrawable(java_logo);
-//                    languageimg.animate().rotation(360).setDuration(2000);
-                }
+                    languageimg.setImageResource(R.drawable.java);
+                    RotateAnimation animation = new RotateAnimation(0,360);
+                    animation.setDuration(2000);
+                    languageimg.startAnimation(animation);
                     break;
+
                 case "JavaScript":
-                {   Drawable js_logo = ResourcesCompat.getDrawable(res, R.drawable.js, null);
-                    languageimg.setImageDrawable(js_logo);
-//                    languageimg.animate().translationX(200).setDuration(1000);
+
+                    languageimg.setImageResource(R.drawable.js);
+                    RotateAnimation animation1 = new RotateAnimation(0,-360);
+                    animation1.setDuration(2000);
+                    languageimg.startAnimation(animation1);
+                    languageimg.animate().rotation(360);
                     break;
-                }
+
                 case "Python":
-                {   Drawable python_logo = ResourcesCompat.getDrawable(res, R.drawable.python, null);
-                    languageimg.setImageDrawable(python_logo);
-//                    languageimg.animate().rotation(3600).setDuration(2000);
+                    languageimg.setImageResource(R.drawable.python);
+                    RotateAnimation animation2 = new RotateAnimation(0,-360);
+                    animation2.setDuration(2000);
+//                    ScaleAnimation animation2 = new ScaleAnimation(100,200,0,0);
+//                    animation2.setDuration(2000);
+                    languageimg.startAnimation(animation2);
                     break;
-                }
+                ///change animations
 
                 case "C":
-                {
-                    Drawable C_logo = ResourcesCompat.getDrawable(res, R.drawable.c, null);
-                    languageimg.setImageDrawable(C_logo);
-//                    languageimg.animate().rotation(3300).setDuration(1000);
+                    languageimg.setImageResource(R.drawable.c);
+                    RotateAnimation animation3= new RotateAnimation(0,360);
+                    animation3.setDuration(2000);
+                    languageimg.startAnimation(animation3);
                     break;
-                }
+
                 case "C++":
-                {
-                    Drawable Cpp = ResourcesCompat.getDrawable(res, R.drawable.cpp, null);
-                    languageimg.setImageDrawable(Cpp);
-//                    languageimg.animate().rotation(360).setDuration(1000);
+
+                    languageimg.setImageResource(R.drawable.cpp);
+                    RotateAnimation animation4= new RotateAnimation(0,360);
+                    animation4.setDuration(2000);
+                    languageimg.startAnimation(animation4);
                     break;
-                }
+
+
                 case "C#":
-                {   Drawable Csharp = ResourcesCompat.getDrawable(res, R.drawable.csharp, null);
-                    languageimg.setImageDrawable(Csharp);
-//                    languageimg.animate().scaleY(10).setDuration(1000);
+                    languageimg.setImageResource(R.drawable.csharp);
+                    RotateAnimation animation5= new RotateAnimation(0,360);
+                    animation5.setDuration(2000);
+                    languageimg.startAnimation(animation5);
                     break;
-                }
+
                 case "PHP":
-                {   Drawable php = ResourcesCompat.getDrawable(res, R.drawable.php, null);
-                    languageimg.setImageDrawable(php);
-//                    languageimg.animate().translationX(-100).setDuration(1000);
+                    languageimg.setImageResource(R.drawable.php);
+                    RotateAnimation animation6= new RotateAnimation(0,360);
+                    animation6.setDuration(2000);
+                    languageimg.startAnimation(animation6);
                     break;
-                }
+
                 case "R":
-                {   Drawable r = ResourcesCompat.getDrawable(res, R.drawable.r, null);
-                    languageimg.setImageDrawable(r);
-//                    languageimg.animate().translationZ(10).setDuration(1000);
+                    //fix R image
+                    languageimg.setImageResource(R.drawable.r);
+                    RotateAnimation animation7= new RotateAnimation(0,360);
+                    animation7.setDuration(2000);
+                    languageimg.startAnimation(animation7);
                     break;
-                }
+
             }
 
 
