@@ -45,20 +45,18 @@ public class MainActivity extends AppCompatActivity {
         result = (TextView ) findViewById(R.id.match);
     }
     public void calculate(View view){
-        //extra stuff to handle:  if user writes special character or numbers as a name , if name_value contains a number or special character set it to "", then the toast will ask for name
-        //Get same result if chose same language twice with the same name?
         Spinner mySpinner = (Spinner)  findViewById(R.id.spinner);
         String language = mySpinner.getSelectedItem().toString();//gets the selected language
         String name_value = name.getText().toString();// gets the name of the user
-        ImageView languageimg = (ImageView) findViewById(R.id.languagelogo);
-        EditText javap = (EditText) findViewById(R.id.javap);
-        EditText jsp = (EditText) findViewById(R.id.jsp);
-        EditText pythonp = (EditText) findViewById(R.id.pythonp);
-        EditText cp = (EditText) findViewById(R.id.cp);
-        EditText cppp = (EditText) findViewById(R.id.cppp);
-        EditText csharpp = (EditText) findViewById(R.id.csharpp);
-        EditText phpp= (EditText) findViewById(R.id.phpp);
-        EditText rp = (EditText) findViewById(R.id.rp);
+        ImageView language_img = (ImageView) findViewById(R.id.languagelogo);
+        TextView javap = (TextView) findViewById(R.id.javap);
+        TextView jsp = (TextView) findViewById(R.id.jsp);
+        TextView python_p = (TextView) findViewById(R.id.pythonp);
+        TextView cp = (TextView) findViewById(R.id.cp);
+        TextView cpp_p = (TextView) findViewById(R.id.cppp);
+        TextView csharp_p = (TextView) findViewById(R.id.csharpp);
+        TextView php_p = (TextView) findViewById(R.id.phpp);
+        TextView rp = (TextView) findViewById(R.id.rp);
         //Was initially planning on using the visibility attribute as learned in class however this means creating 8 Imageviews and setting
         //their visibility according to the case which does not look efficient , that is why I decided to set the image from java
         Random num =  new Random();
@@ -70,78 +68,75 @@ public class MainActivity extends AppCompatActivity {
             {
                 case "Java":
 
-                    languageimg.setImageResource(R.drawable.java);
+                    language_img.setImageResource(R.drawable.java);
                     RotateAnimation animation = new RotateAnimation(0,360);
                     animation.setDuration(2000);
-                    languageimg.startAnimation(animation);
+                    language_img.startAnimation(animation);
                     javap.setText(match+"%");
                     break;
 
                 case "JavaScript":
 
-                    languageimg.setImageResource(R.drawable.js);
+                    language_img.setImageResource(R.drawable.js);
                     RotateAnimation animation1 = new RotateAnimation(0,-360);
                     animation1.setDuration(2000);
-                    languageimg.startAnimation(animation1);
+                    language_img.startAnimation(animation1);
                     jsp.setText(match+"%");
 
                     break;
 
                 case "Python":
-                    languageimg.setImageResource(R.drawable.python);
-                    RotateAnimation animation2 = new RotateAnimation(0,-360);
+                    language_img.setImageResource(R.drawable.python);
+                    RotateAnimation animation2 = new RotateAnimation(0,360);
                     animation2.setDuration(2000);
-                    languageimg.startAnimation(animation2);
-                    pythonp.setText(match+"%");
+                    language_img.startAnimation(animation2);
+                    python_p.setText(match+"%");
                     break;
-                ///change animations
 
                 case "C":
-                    languageimg.setImageResource(R.drawable.c);
-                    RotateAnimation animation3= new RotateAnimation(0,360);
+                    language_img.setImageResource(R.drawable.c);
+                    RotateAnimation animation3= new RotateAnimation(0,-360);
                     animation3.setDuration(2000);
-                    languageimg.startAnimation(animation3);
+                    language_img.startAnimation(animation3);
                     cp.setText(match+"%");
                     break;
 
                 case "C++":
 
-                    languageimg.setImageResource(R.drawable.cpp);
+                    language_img.setImageResource(R.drawable.cpp);
                     RotateAnimation animation4= new RotateAnimation(0,360);
                     animation4.setDuration(2000);
-                    languageimg.startAnimation(animation4);
-                    cppp.setText(match+"%");
+                    language_img.startAnimation(animation4);
+                    cpp_p.setText(match+"%");
                     break;
 
 
                 case "C#":
-                    languageimg.setImageResource(R.drawable.csharp);
-                    RotateAnimation animation5= new RotateAnimation(0,360);
+                    language_img.setImageResource(R.drawable.csharp);
+                    RotateAnimation animation5= new RotateAnimation(0,-360);
                     animation5.setDuration(2000);
-                    languageimg.startAnimation(animation5);
-                    csharpp.setText(match+"%");
+                    language_img.startAnimation(animation5);
+                    csharp_p.setText(match+"%");
                     break;
 
                 case "PHP":
-                    languageimg.setImageResource(R.drawable.php);
+                    language_img.setImageResource(R.drawable.php);
                     RotateAnimation animation6= new RotateAnimation(0,360);
                     animation6.setDuration(2000);
-                    languageimg.startAnimation(animation6);
-                    phpp.setText(match+"%");
+                    language_img.startAnimation(animation6);
+                    php_p.setText(match+"%");
                     break;
 
                 case "R":
                     //fix R image
-                    languageimg.setImageResource(R.drawable.r);
-                    RotateAnimation animation7= new RotateAnimation(0,360);
+                    language_img.setImageResource(R.drawable.r);
+                    RotateAnimation animation7= new RotateAnimation(0,-360);
                     animation7.setDuration(2000);
-                    languageimg.startAnimation(animation7);
+                    language_img.startAnimation(animation7);
                     rp.setText(match+"%");
                     break;
 
             }
-
-
 
         }
         else{

@@ -99,7 +99,7 @@
     <TableLayout
 
         android:layout_width="409dp"
-        android:layout_height="304dp"
+        android:layout_height="314dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,163 +109,146 @@
             android:layout_width="match_parent"
             android:layout_height="6dp">
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none"
+                android:layout_height="40dp"
                 android:text="Java"
-                />
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/javap"
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none" />
-
+                android:layout_height="40dp"
+                android:textSize="22sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="43dp">
 
-            <EditText
-                android:id="@+id/JS"
+            <TextView
+                android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="JavaScript" />
+                android:text="JavaScript"
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/jsp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none" />
-
+                android:textSize="22sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <EditText
-                android:id="@+id/editTextTextPersonName3"
+            <TextView
+                android:id="@+id/textView6"
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="python" />
+                android:layout_height="40dp"
+                android:text="Python"
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/pythonp"
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none"/>
-
+                android:layout_height="40dp"
+                android:textSize="22sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="30dp">
 
-            <EditText
+            <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="C" />
+                android:text="C"
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/cp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none" />
+                android:textSize="22sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="C++" />
-
-            <EditText
-                android:id="@+id/cppp"
-                android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="c#" />
-
-            <EditText
-                android:id="@+id/csharpp"
-                android:layout_width="match_parent"
-                android:layout_height="38dp"
-                android:ems="10"
-                android:inputType="none" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <EditText
-                android:id="@+id/editTextTextPersonName7"
+            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="PHP" />
+                android:text="C++"
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
+                android:id="@+id/cppp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="22sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="40sp"
+                android:text="C#"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/csharpp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textSize="22sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PHP"
+                android:textSize="22sp" />
+
+            <TextView
                 android:id="@+id/phpp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none" />
+                android:textSize="22sp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
 
-            <EditText
-                android:id="@+id/editTextTextPersonName8"
+            <TextView
+                android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none"
-                android:text="R" />
+                android:text="R"
+                android:textSize="22sp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/rp"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:ems="10"
-                android:inputType="none" />
+                android:textSize="22sp" />
+
         </TableRow>
     </TableLayout>
 
